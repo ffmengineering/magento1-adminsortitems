@@ -1,7 +1,14 @@
 Ffm AdminSortItems Extension
 =====================
-Makes tab items in admin sortable
+Makes tab items on the left sid in admin sortable. 
+Useful for pages with a load of tabs like customer or products where you only use a few regularly.
+Sorting is saved in a table using `admin user id`, `modeule/controller/action` and `menuidentifier`.
 
+Uses https://github.com/RubaXa/Sortable for the sorting part, relies heavily on Javascript so should have minimal conflicts with other modules.
+
+Version
+-------------
+0.1.0
 
 Compatibility
 -------------
@@ -11,7 +18,7 @@ tested on
 
 Roadmap
 -------------
-Make more sortable
+Make more things sortable!
 
 Developer
 ---------
