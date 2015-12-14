@@ -1,0 +1,5 @@
+src/app/code/community/Ffm/AdminSortItems   app/code/community/Ffm/AdminSortItems
+src/app/etc/modules/Ffm_AdminSortItems.xml  app/etc/modules/Ffm_AdminSortItems.xml
+src/app/design/adminhtml/default/default/layout/ffm_adminsortitems.xml  app/design/adminhtml/default/default/layout/ffm_adminsortitems.xml
+src/app/design/adminhtml/default/default/template/ffm_adminsortitems  app/design/adminhtml/default/default/template/ffm_adminsortitems
+src/js/RubaXa_Sortable  js/RubaXa_Sortable

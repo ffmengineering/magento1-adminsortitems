@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+        <reference name="head">
+            <action method="setCanLoadExtJs"><flag>1</flag></action>
+            <action method="addJs"><name>RubaXa_Sortable/Sortable.min.js</name></action>
+        </reference>
+        <reference name="js">
+            <block type="ffm_adminsortitems/adminhtml_sorting" name="ffm_adminsortitems_sorting" template="ffm_adminsortitems/sorting.phtml" />
+        </reference>
+    </default>
+</layout>

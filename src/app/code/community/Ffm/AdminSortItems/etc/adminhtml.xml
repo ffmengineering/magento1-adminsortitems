@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Ffm_AdminSortItems extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the OSL 3.0 License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/OSL-3.0
+ *
+ * @category       Ffm
+ * @package        Ffm_AdminSortItems
+ * @copyright      Copyright (c) 2015
+ * @license        OSL 3.0 http://opensource.org/licenses/OSL-3.0
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <ffm_adminsortitems>
+                        <children>
+                            <save translate="title" module="ffm_adminsortitems">
+                                <title>Save the choosen sorting for tab menus</title>
+                            </save>
+                        </children>
+                    </ffm_adminsortitems>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

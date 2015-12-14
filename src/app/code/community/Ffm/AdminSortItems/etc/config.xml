@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Ffm_AdminSortItems extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the OSL 3.0 License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/OSL-3.0
+ *
+ * @category       Ffm
+ * @package        Ffm_AdminSortItems
+ * @copyright      Copyright (c) 2015
+ * @license        OSL 3.0 http://opensource.org/licenses/OSL-3.0
+ */
+ -->
+<config>
+    <modules>
+        <Ffm_AdminSortItems>
+            <version>0.1.0</version>
+        </Ffm_AdminSortItems>
+    </modules>
+    <global>
+        <blocks>
+            <ffm_adminsortitems>
+                <class>Ffm_AdminSortItems_Block</class>
+            </ffm_adminsortitems>
+        </blocks>
+        <helpers>
+            <ffm_adminsortitems>
+                <class>Ffm_AdminSortItems_Helper</class>
+            </ffm_adminsortitems>
+        </helpers>
+        <models>
+            <ffm_adminsortitems>
+                <class>Ffm_AdminSortItems_Model</class>
+                <resourceModel>ffm_adminsortitems_resource</resourceModel>
+            </ffm_adminsortitems>
+            <ffm_adminsortitems_resource>
+                <class>Ffm_AdminSortItems_Model_Resource</class>
+                <entities>
+                    <sorting>
+                        <table>ffm_adminsortitems_sorting</table>
+                    </sorting>
+                </entities>
+            </ffm_adminsortitems_resource>
+        </models>
+        <resources>
+            <ffm_adminsortitems_setup>
+                <setup>
+                    <module>Ffm_AdminSortItems</module>
+                </setup>
+            </ffm_adminsortitems_setup>
+        </resources>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <ffm_adminsortitems>
+                    <file>ffm_adminsortitems.xml</file>
+                </ffm_adminsortitems>
+            </updates>
+        </layout>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <ffm_adminsortitems before="Mage_Adminhtml">Ffm_AdminSortItems_Adminhtml</ffm_adminsortitems>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

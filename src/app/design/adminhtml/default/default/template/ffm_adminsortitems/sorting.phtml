@@ -1,0 +1,57 @@
+<?php
+/**
+ * Ffm_AdminSortItems extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the OSL 3.0 License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/OSL-3.0
+ *
+ * @category       Ffm
+ * @package        Ffm_AdminSortItems
+ * @copyright      Copyright (c) 2015
+ * @license        OSL 3.0 http://opensource.org/licenses/OSL-3.0
+ */
+
+$sorting = $this->getCurrentSorting();
+?>
+<script type="text/javascript">
+    var ffmSortings = <?php echo Mage::helper('core')->jsonEncode($sorting);?>;
+    var ffmAjaxActionUrl = '<?php echo $this->getActionUrl();?>';
+</script>
+
+<script type="text/javascript">
+    $$('ul.tabs > li').each(function(item,index){
+        $(item).setAttribute('data-id',index);
+    });
+
+    var tabs = $$('ul.tabs')[0];
+
+    Sortable.create(tabs, {
+        group: "sidemenu",
+        store: {
+            get: function (item) {
+                var order = ffmSortings[item.options.group.name];
+                return order ? order.split('|') : [];
+            },
+            set: function (item) {
+                var order = item.toArray();
+
+                new Ajax.Request(ffmAjaxActionUrl, {
+                    parameters: {
+                        isAjax: 1,
+                        method: 'POST',
+                        identifier: item.options.group.name,
+                        sorting: order.join('|'),
+                        path: '<?php echo $this->getCurrentPath();?>'
+                    },
+                    onSuccess: function(transport) {
+                       console.log(transport);
+                    }
+                });
+            }
+        }
+    });
+</script>

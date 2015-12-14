@@ -1,0 +1,16 @@
+{
+    "name": "Ffm/AdminSortItems",
+    "license": "OSL-3.0",
+    "type": "magento-module",
+    "description": "Makes tab items in admin sortable",
+    "homepage": "http://www.fitforme.nl",
+    "suggest": {
+        "aoepeople/composer-installers": "*"
+    },
+    "authors":[
+        {
+            "name":"Sander Mangel",
+            "email":"s.mangel@fitforme.nl"
+        }
+    ]
+}
