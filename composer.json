@@ -2,6 +2,7 @@
     "name": "Ffm/AdminSortItems",
     "license": "OSL-3.0",
     "type": "magento-module",
+    "version": "0.1.0",
     "description": "Makes tab items in admin sortable",
     "homepage": "http://www.fitforme.nl",
     "suggest": {
