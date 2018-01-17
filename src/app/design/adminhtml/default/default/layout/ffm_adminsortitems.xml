@@ -4,6 +4,7 @@
         <reference name="head">
             <action method="setCanLoadExtJs"><flag>1</flag></action>
             <action method="addJs"><name>RubaXa_Sortable/Sortable.min.js</name></action>
+            <action method="addCss"><stylesheet>ffm_adminsortitems/css/adminsortitems.css</stylesheet></action>
         </reference>
         <reference name="js">
             <block type="ffm_adminsortitems/adminhtml_sorting" name="ffm_adminsortitems_sorting" template="ffm_adminsortitems/sorting.phtml" />
