@@ -1,0 +1,6 @@
+#last_tab{margin-top:20px;cursor:pointer;padding: .3em 0.5em .28em 1.5em;font-weight:bold;}
+.last_tab{display:none}
+.adminhtml-customer-edit .last_tab{display:block}
+ul.tabs .tab-background{box-shadow: none;margin-left:20px;display:block;}
+ul.tabs .tab-background a{background-color: #eee !important;box-shadow: none;}
+ul.tabs li.tab-background:last-of-type a span{background:none;}
